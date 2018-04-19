@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +12,7 @@ namespace DeafCommOar
 		public App ()
 		{
 			InitializeComponent();            
-			MainPage = new DeafCommOar.ConfigurationPage();
+			MainPage = new Pages.ConfigurationPage();
 		}
 
 		protected override void OnStart ()

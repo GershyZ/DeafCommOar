@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace DeafCommOar
+namespace DeafCommOar.Pages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ConfigurationPage : ContentPage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ConfigurationPage : ContentPage
+    {
         ViewModels.ConfigurationPageVM configvm;
-        public ConfigurationPage ()
-		{
-			InitializeComponent ();
+        public ConfigurationPage()
+        {
+            InitializeComponent();
             configvm = new ViewModels.ConfigurationPageVM();
-		}
+        }
 
         private void show2Oars(object sender, EventArgs eventArgs)
         {
@@ -34,6 +34,6 @@ namespace DeafCommOar
         private void gotoMainPage(object sender, EventArgs eventArgs)
         {
             configvm.completeConfiguration(sl_oars);
-        }     
+        }
     }
 }

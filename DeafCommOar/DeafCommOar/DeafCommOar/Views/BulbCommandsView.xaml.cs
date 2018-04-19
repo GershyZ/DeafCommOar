@@ -1,21 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace DeafCommOar.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class BulbCommandsView : ContentView
 	{
 		public BulbCommandsView ()
 		{
 			InitializeComponent ();
 		}
+        
         public double CommandValue
         {
             get
@@ -28,15 +25,14 @@ namespace DeafCommOar.Views
                     power++;
                 }
                 return commandsum;
-            }            
+            }
         }
         public void reset()
         {
-            foreach(BulbView bv in sl_bulbs.Children)
+            foreach (BulbView bv in sl_bulbs.Children)
             {
                 bv.reset();
             }
         }
-
     }
 }

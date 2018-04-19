@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DeafCommOar", "DeafCommOar\DeafCommOar\DeafCommOar.shproj", "{F721C885-0298-4D71-B849-80968A0319F3}"
 EndProject
@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeafCommOar.iOS", "iOS\Deaf
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		DeafCommOar\DeafCommOar\DeafCommOar.projitems*{0a9e8633-7059-41f4-bacd-35c6f2382cb6}*SharedItemsImports = 4
+		DeafCommOar\DeafCommOar\DeafCommOar.projitems*{88199a3e-a9a5-45cf-94b8-7ce6790ae416}*SharedItemsImports = 4
 		DeafCommOar\DeafCommOar\DeafCommOar.projitems*{f721c885-0298-4d71-b849-80968a0319f3}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
