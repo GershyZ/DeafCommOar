@@ -7,16 +7,16 @@ using Xamarin.Forms;
 
 namespace DeafCommOar
 {
-	public partial class MainPage : ContentPage
+	public partial class CoxswainControllerPage : ContentPage
 	{
-        ViewModels.MainPageVM _mainPageVM;
+        ViewModels.CoxswainControllerPageVM _coxswaincontrollerVM;
 
-		public MainPage(String oarlayout)
+		public CoxswainControllerPage(String oarlayout)
 		{
 			InitializeComponent();
-            _mainPageVM = new ViewModels.MainPageVM();
-            _mainPageVM.GetSinglesLayout(sl_singles, oarlayout);
-            _mainPageVM.PopulateGroups(sl_singles, sl_pairs,2);
+            _coxswaincontrollerVM = new ViewModels.CoxswainControllerPageVM();
+            _coxswaincontrollerVM.GetSinglesLayout(sl_singles, oarlayout);
+            _coxswaincontrollerVM.PopulateGroups(sl_singles, sl_pairs,2);
             BulbCommand.reset();
 		}
 

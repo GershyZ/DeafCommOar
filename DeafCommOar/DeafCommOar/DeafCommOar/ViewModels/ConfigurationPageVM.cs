@@ -33,7 +33,7 @@ namespace DeafCommOar.ViewModels
                 layout += cov.Orientation;
             }
 
-            App.Current.MainPage = new DeafCommOar.MainPage(layout);
+            App.Current.MainPage = new DeafCommOar.CoxswainControllerPage(layout);
         }
         public event PropertyChangedEventHandler 
             

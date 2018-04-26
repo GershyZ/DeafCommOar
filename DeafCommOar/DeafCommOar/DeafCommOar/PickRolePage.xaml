@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DeafCommOar.Views"
+             x:Class="DeafCommOar.PickRolePage">
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Vertical" BackgroundColor="Purple" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Picker Grid.Row="0" VerticalOptions="CenterAndExpand" ItemsSource="{Binding Roles}" SelectedIndexChanged="Picker_SelectedIndexChanged" SelectedIndex="0" HorizontalOptions="CenterAndExpand"/>
+                <StackLayout Grid.Row="1">
+                <StackLayout x:Name="sl_coxswain_controls" IsVisible="False">
+                    <Button Text="Generate QR Code" HorizontalOptions="Center" Clicked="Button_Clicked"/>
+                </StackLayout>
+                <StackLayout x:Name="sl_athlete_form" IsVisible="False" Orientation="Horizontal">
+                    <Entry Placeholder="Name" x:Name="e_athlete_name"/>
+                    <local:ConfigurationOarView x:Name="cov_rower_pref"/>
+                </StackLayout>
+                </StackLayout>
+                <Button Grid.Row="2" Text="Submit" VerticalOptions="EndAndExpand" Clicked="Button_Clicked"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -16,6 +16,13 @@ namespace DeafCommOar.Views
         public int Stage
         {
             get { return _stage; }
+            set {
+                _stage = 0;
+                while(_stage != value)
+                {
+                    StageChanged(null, null);
+                }
+            }
         }
         public BulbView()
         {

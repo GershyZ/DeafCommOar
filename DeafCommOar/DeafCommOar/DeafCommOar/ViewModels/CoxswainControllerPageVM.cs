@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace DeafCommOar.ViewModels
 {
-    class MainPageVM : INotifyPropertyChanged
+    class CoxswainControllerPageVM : INotifyPropertyChanged
     {
 
         public event PropertyChangedEventHandler PropertyChanged;
