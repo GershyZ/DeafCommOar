@@ -21,5 +21,10 @@ namespace DeafCommOar
         {
             App.Current.MainPage = new Pages.ConfigurationPage();
         }
+
+        public void ModifyCommands(object s, EventArgs e)
+        {
+            App.Current.MainPage = new Pages.CreateCommandsPage();
+        }
     }
 }

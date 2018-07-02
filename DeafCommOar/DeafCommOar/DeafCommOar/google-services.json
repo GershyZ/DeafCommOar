@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "844777621843",
+    "firebase_url": "https://deaf-comm-oar.firebaseio.com",
+    "project_id": "deaf-comm-oar",
+    "storage_bucket": "deaf-comm-oar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844777621843:android:6a01c42aee76a6f7",
+        "android_client_info": {
+          "package_name": "com.trra.adaptive.deafcommoar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844777621843-51uu0nr9i8bjv1676687bkmo7pvcujc1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACW2xqmStMdGmq_lt5vKc5Kz7HAiU1Mdo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

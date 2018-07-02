@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DeafCommOar.Views"            
+             xmlns:local="clr-namespace:DeafCommOar.Views"                           
              x:Class="DeafCommOar.PickRolePage">
   <!--Pages can be added as references or inline-->
     <ContentPage Title="Athlete" >
         <ContentPage.Content>
             <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
+                <Entry x:Name="e_AthleteName" Placeholder="Name"/>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                    <Entry x:Name="e_AthleteName" Placeholder="Name"/>
                     <Label Text="Preferred Orientation"/>
                     <local:ConfigurationOarView HorizontalOptions="EndAndExpand"/>
                 </StackLayout>
@@ -20,9 +20,9 @@
     <ContentPage Title="Coxswain">
         <ContentPage.Content>
             <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
+                <Button Text="Create Commands" Clicked="ModifyCommands"/>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                     <Entry x:Name="e_TeamName" Placeholder="Team Name"/>
-                    <Entry x:Name="e_Key" Placeholder="Password"/>
                 </StackLayout>
                 <Button x:Name="b_ToggleNetwork" Clicked="CreateTeamHotspot"/>
             </StackLayout>

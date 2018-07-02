@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,10 +10,17 @@ namespace DeafCommOar
 {
 	public partial class App : Application
 	{
-		public App ()
+        public static Dictionary<long, string> COXSWAIN_COMMANDS;
+        public static MobileServiceClient MobileService =
+            new MobileServiceClient(
+            "https://deafcommoar.azurewebsites.net"
+        );
+
+        public App ()
 		{
+            COXSWAIN_COMMANDS = new Dictionary<long, string>();
 			InitializeComponent();            
-			MainPage = new PickRolePage();
+			MainPage = new NavigationPage(new CoxswainControllerPage("spspps"));
 		}
 
         public static string DecimalToArbitrarySystem(long decimalNumber, int radix)

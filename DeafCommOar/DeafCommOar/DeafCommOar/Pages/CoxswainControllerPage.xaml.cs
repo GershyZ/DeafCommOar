@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,9 @@ using Xamarin.Forms;
 
 namespace DeafCommOar
 {
-	public partial class CoxswainControllerPage : ContentPage
+    //https://docs.microsoft.com/en-us/xamarin/xamarin-forms/data-cloud/push-notifications/azure    
+    //https://www.youtube.com/watch?v=j2YSMKOPBXg
+    public partial class CoxswainControllerPage : ContentPage
 	{
         ViewModels.CoxswainControllerPageVM _coxswaincontrollerVM;
 
@@ -20,8 +23,12 @@ namespace DeafCommOar
             BulbCommand.reset();
 		}
 
-        private void SendMessage(object sender, EventArgs e)
+        private async Task SendMessageAsync(object sender, EventArgs e)
         {
+            CurrentPlatform.Init();
+            CoxswainCommand cmd = new CoxswainCommand { rower_binary = 27, message = "Testing...1 2" };
+            await App.MobileService.GetTable<CoxswainCommand>().InsertAsync(cmd);
+
             foreach (Views.ToggleImageView tiv in sl_pairs.Children)
             {
                 tiv.reset();

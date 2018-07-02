@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:bulb="clr-namespace:DeafCommOar.Views"
+             x:Class="DeafCommOar.Pages.CreateCommandsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Create New Command" Clicked="NewCommandPrompt" HorizontalOptions="CenterAndExpand"/>
+            <StackLayout x:Name="sl_commands" BackgroundColor="Red" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            <Button Text="Update Commands List" Clicked="GoBack" VerticalOptions="End" HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
