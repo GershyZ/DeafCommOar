@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DeafCommOar.Views"
-             x:Class="DeafCommOar.CoxswainControllerPage">
+             x:Class="DeafCommOar.Pages.CoxswainCallPage">
+
     <ContentPage.Padding>
-            <OnPlatform x:TypeArguments="Thickness"
+        <OnPlatform x:TypeArguments="Thickness"
                 iOS="0, 5, 0, 0"
                 Android="0, 0, 0, 0"
                 WinPhone="0, 0, 0, 0" />
-        </ContentPage.Padding>
-        <ContentPage.Content>
+    </ContentPage.Padding>
+    <ContentPage.Content>
         <Grid RowSpacing="0" x:Name="DCOGrid">
             <Grid.RowDefinitions>
                 <RowDefinition Height="90"/>
@@ -22,14 +22,14 @@
                 <ColumnDefinition Width="60"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="b_sendmsg" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalOptions="CenterAndExpand" Text="Send Message" />
-            <StackLayout Orientation="Vertical" x:Name="sl_pairs" Grid.Row="1"  Grid.Column="0" BackgroundColor="Red">               
+            <StackLayout Orientation="Vertical" x:Name="sl_pairs" Grid.Row="1"  Grid.Column="0" BackgroundColor="Red">
             </StackLayout>
             <StackLayout Orientation="Vertical" x:Name="sl_singles" Grid.Row="1"  Grid.Column="1" Spacing="25" BackgroundColor="Wheat">
             </StackLayout>
             <StackLayout Orientation="Vertical" x:Name="sl_halves" Grid.Row="1"  Grid.Column="2" BackgroundColor="Red">
 
             </StackLayout>
-            <local:BulbCommandsView x:Name="BulbCommand"  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" HorizontalOptions="CenterAndExpand"/>
+            <Picker x:Name="p_coxswain_call" ItemsSource="{Binding Calls}"  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" HorizontalOptions="CenterAndExpand"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

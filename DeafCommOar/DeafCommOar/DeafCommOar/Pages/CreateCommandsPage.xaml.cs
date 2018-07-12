@@ -31,13 +31,6 @@ namespace DeafCommOar.Pages
 
         public void GoBack(object s, EventArgs e)
         {
-           foreach(CoxswainCommand cc in commands)
-            {
-                if (!App.COXSWAIN_COMMANDS.Keys.Contains(cc.BulbCode))
-                {
-                    App.COXSWAIN_COMMANDS.Add(cc.BulbCode, cc.Command);
-                }
-            }
             App.Current.MainPage.Navigation.PopAsync();
         }
 
@@ -48,12 +41,12 @@ namespace DeafCommOar.Pages
             try
             {
                 var cmd = new CoxswainCommand();
-                var curr = App.COXSWAIN_COMMANDS.GetEnumerator();
+                var curr = App.COXSWAIN_CALLS.GetEnumerator();
                 while (false && curr.MoveNext())
                 {
                     cmd = new CoxswainCommand();
                     commands.Add(cmd);
-                    sl_commands.Children.Add(cmd.GetCommandView(curr.Current.Key, curr.Current.Value));
+                    //sl_commands.Children.Add(cmd.GetCommandView(curr.Current.Key, curr.Current.Value));
                 }
             }
             catch (Exception e) { };

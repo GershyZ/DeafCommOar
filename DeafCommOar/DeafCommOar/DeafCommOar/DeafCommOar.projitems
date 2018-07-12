@@ -22,6 +22,10 @@
       <DependentUpon>ConfigurationPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\CoxswainCallPage.xaml.cs">
+      <DependentUpon>CoxswainCallPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Pages\CoxswainControllerPage.xaml.cs">
       <DependentUpon>CoxswainControllerPage.xaml</DependentUpon>
     </Compile>
@@ -70,6 +74,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)google-services.json" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\CoxswainCallPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

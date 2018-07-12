@@ -12,8 +12,7 @@
                     <Label Text="Preferred Orientation"/>
                     <local:ConfigurationOarView HorizontalOptions="EndAndExpand"/>
                 </StackLayout>
-                <Entry x:Name="e_SSID" Placeholder="SSID"/>
-                <Entry x:Name="e_PASSWORD" Placeholder="PASSWORD"/>
+                <Button Text="Show QRCode" Clicked="ShowAthleteQRcode"/>
             </StackLayout>
         </ContentPage.Content>
     </ContentPage>
@@ -24,7 +23,7 @@
                 <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                     <Entry x:Name="e_TeamName" Placeholder="Team Name"/>
                 </StackLayout>
-                <Button x:Name="b_ToggleNetwork" Clicked="CreateTeamHotspot"/>
+                <Button Clicked="CreateTeamHotspot"/>
             </StackLayout>
         </ContentPage.Content>
     </ContentPage>

@@ -8,7 +8,10 @@ namespace DeafCommOar.ViewModels
 {
     class CoxswainControllerPageVM : INotifyPropertyChanged
     {
-
+        public  List<string> Calls
+        {
+            get { return App.COXSWAIN_CALLS; }
+        }
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(String info)
         {

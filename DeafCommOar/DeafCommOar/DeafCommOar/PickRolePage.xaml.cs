@@ -16,7 +16,7 @@ namespace DeafCommOar
         {
             InitializeComponent();
         }
-
+        private void ShowAthleteQRcode(object o, EventArgs e) { }
         public void CreateTeamHotspot(object s, EventArgs e)
         {
             App.Current.MainPage = new Pages.ConfigurationPage();
